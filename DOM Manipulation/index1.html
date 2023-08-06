@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+<button id="changeContentBtn">Click Me!</button>
+<div id="contentDiv"></div>
+
+<script>
+  const button = document.getElementById('changeContentBtn');
+  const contentDiv = document.getElementById('contentDiv');
+  button.addEventListener('click', () => {
+    const randomNumber = Math.random();
+
+    if (randomNumber < 0.5) {
+      contentDiv.textContent = 'You clicked the button!';
+    } else {
+      contentDiv.innerHTML = '<img src="path_to_your_image.jpg" alt="Random Image">';
+    }
+  });
+
+
+</script>
+</body>
+</html>

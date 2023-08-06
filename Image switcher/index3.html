@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Switcher</title>
+</head>
+<body>
+<img id="image" src="image1.jpg" alt="Image 1">
+<button onclick="changeImage('image1.jpg')">Switch to Image 1</button>
+<button onclick="changeImage('image2.jpg')">Switch to Image 2</button>
+
+<script>
+    function changeImage(imageSource) {
+        var imageElement = document.getElementById("image");
+        imageElement.src = imageSource;
+        imageElement.alt = "Image " + (imageSource === "image1.jpg" ? "1" : "2");
+    }
+</script>
+</body>
+</html>
